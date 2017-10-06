@@ -1,12 +1,14 @@
 import React from "react";
 import { render } from "react-dom";
-import { BrowserRouter } from "react-router-dom";
-import App from "./App";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import Home from "./components/Home";
 
 const renderApp = () => {
   render(
     <BrowserRouter>
-      <App />
+      <Switch>
+        <Route exatc path="/" component={Home} />
+      </Switch>
     </BrowserRouter>,
     document.getElementById("app")
   );
